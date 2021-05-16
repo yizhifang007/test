@@ -1,8 +1,12 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,description_json,checked_png,monster_png,sign_png,bg_png",
+			"keys": "",
 			"name": "preload"
+		},
+		{
+			"keys": "",
+			"name": "loading"
 		}
 	],
 	"resources": [
@@ -122,29 +126,39 @@
 			"name": "track_sb_png"
 		},
 		{
-			"name": "description_json",
+			"url": "assets/bg.jpg",
+			"type": "image",
+			"name": "bg_jpg"
+		},
+		{
+			"url": "assets/egret_icon.png",
+			"type": "image",
+			"name": "egret_icon_png"
+		},
+		{
+			"url": "config/description.json",
 			"type": "json",
-			"url": "config/description.json"
+			"name": "description_json"
 		},
 		{
-			"name": "checked_png",
+			"url": "assets/Button/btn_match_apply.png",
 			"type": "image",
-			"url": "assets/game/checked.png"
+			"name": "btn_match_apply_png"
 		},
 		{
-			"name": "monster_png",
+			"url": "assets/Button/btn_opt_yellow.png",
 			"type": "image",
-			"url": "assets/game/monster.png"
+			"name": "btn_opt_yellow_png"
 		},
 		{
-			"name": "sign_png",
+			"url": "assets/Button/btn_opt_gary.png",
 			"type": "image",
-			"url": "assets/game/sign.png"
+			"name": "btn_opt_gary_png"
 		},
 		{
-			"name": "bg_png",
+			"url": "assets/Button/btn_opt_blue.png",
 			"type": "image",
-			"url": "assets/game/bg.png"
+			"name": "btn_opt_blue_png"
 		}
 	]
 }
