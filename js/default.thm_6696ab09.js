@@ -10,7 +10,7 @@ window.skins=window.skins||{};
                 window.generateEUI = window.generateEUI||{};
                 generateEUI.paths = generateEUI.paths||{};
                 generateEUI.styles = undefined;
-                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml"};generateEUI.paths['resource/eui_skins/ButtonSkin.exml'] = window.skins.ButtonSkin = (function (_super) {
+                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml","loginComponent":"resource/eui_skins/loginComponent.exml","lobbyComponent":"resource/eui_skins/lobbyComponent.exml","InputComponent":"resource/eui_skins/InputComponent.exml"};generateEUI.paths['resource/eui_skins/ButtonSkin.exml'] = window.skins.ButtonSkin = (function (_super) {
 	__extends(ButtonSkin, _super);
 	function ButtonSkin() {
 		_super.call(this);
@@ -192,6 +192,65 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return HSliderSkin;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/InputComponent.exml'] = window.InputComponentSkin = (function (_super) {
+	__extends(InputComponentSkin, _super);
+	function InputComponentSkin() {
+		_super.call(this);
+		this.skinParts = ["inputImage","ImageInput"];
+		
+		this.height = 200;
+		this.width = 200;
+		this.elementsContent = [this.ImageInput_i()];
+	}
+	var _proto = InputComponentSkin.prototype;
+
+	_proto.ImageInput_i = function () {
+		var t = new eui.Group();
+		this.ImageInput = t;
+		t.height = 200;
+		t.horizontalCenter = 0;
+		t.verticalCenter = 0;
+		t.width = 200;
+		t.elementsContent = [this._Rect1_i(),this._Rect2_i(),this._Rect3_i(),this.inputImage_i()];
+		return t;
+	};
+	_proto._Rect1_i = function () {
+		var t = new eui.Rect();
+		t.bottom = 0;
+		t.fillColor = 0x383838;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		return t;
+	};
+	_proto._Rect2_i = function () {
+		var t = new eui.Rect();
+		t.bottom = 20;
+		t.fillColor = 0x918C8C;
+		t.horizontalCenter = 0;
+		t.top = 20;
+		t.width = 20;
+		return t;
+	};
+	_proto._Rect3_i = function () {
+		var t = new eui.Rect();
+		t.fillColor = 0x918C8C;
+		t.height = 20;
+		t.left = 20;
+		t.right = 20;
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.inputImage_i = function () {
+		var t = new eui.Image();
+		this.inputImage = t;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		return t;
+	};
+	return InputComponentSkin;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/ItemRendererSkin.exml'] = window.skins.ItemRendererSkin = (function (_super) {
 	__extends(ItemRendererSkin, _super);
 	function ItemRendererSkin() {
@@ -245,6 +304,242 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return ItemRendererSkin;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/lobbyComponent.exml'] = window.lobbyComponentSkin = (function (_super) {
+	__extends(lobbyComponentSkin, _super);
+	function lobbyComponentSkin() {
+		_super.call(this);
+		this.skinParts = ["before_input","after_input","submit","before","after","submitGrp"];
+		
+		this.height = 1136;
+		this.width = 640;
+		this.elementsContent = [this._Rect1_i(),this.before_input_i(),this._Label1_i(),this._Label2_i(),this.after_input_i(),this.submit_i(),this.submitGrp_i()];
+	}
+	var _proto = lobbyComponentSkin.prototype;
+
+	_proto._Rect1_i = function () {
+		var t = new eui.Rect();
+		t.bottom = 0;
+		t.fillColor = 0x3476bc;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		return t;
+	};
+	_proto.before_input_i = function () {
+		var t = new InputComponent();
+		this.before_input = t;
+		t.height = 20;
+		t.width = 20;
+		t.x = 240;
+		t.y = 206;
+		return t;
+	};
+	_proto._Label1_i = function () {
+		var t = new eui.Label();
+		t.text = "打扫前";
+		t.x = 80;
+		t.y = 34;
+		return t;
+	};
+	_proto._Label2_i = function () {
+		var t = new eui.Label();
+		t.text = "打扫后";
+		t.x = 80;
+		t.y = 411;
+		return t;
+	};
+	_proto.after_input_i = function () {
+		var t = new InputComponent();
+		this.after_input = t;
+		t.height = 20;
+		t.width = 20;
+		t.x = 240;
+		t.y = 588;
+		return t;
+	};
+	_proto.submit_i = function () {
+		var t = new eui.Button();
+		this.submit = t;
+		t.height = 90;
+		t.label = "提交";
+		t.width = 229;
+		t.x = 176;
+		t.y = 862;
+		return t;
+	};
+	_proto.submitGrp_i = function () {
+		var t = new eui.Group();
+		this.submitGrp = t;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Rect2_i(),this._Label3_i(),this._Label4_i(),this.before_i(),this.after_i(),this._Label5_i()];
+		return t;
+	};
+	_proto._Rect2_i = function () {
+		var t = new eui.Rect();
+		t.bottom = 0;
+		t.fillColor = 0xba9234;
+		t.left = 0;
+		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = 0;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto._Label3_i = function () {
+		var t = new eui.Label();
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.text = "打扫前";
+		t.x = 90;
+		t.y = 44;
+		return t;
+	};
+	_proto._Label4_i = function () {
+		var t = new eui.Label();
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.text = "打扫后";
+		t.x = 90;
+		t.y = 421;
+		return t;
+	};
+	_proto.before_i = function () {
+		var t = new eui.Image();
+		this.before = t;
+		t.height = 200;
+		t.source = "";
+		t.width = 200;
+		t.x = 240;
+		t.y = 174;
+		return t;
+	};
+	_proto.after_i = function () {
+		var t = new eui.Image();
+		this.after = t;
+		t.height = 200;
+		t.source = "";
+		t.width = 200;
+		t.x = 240;
+		t.y = 530;
+		return t;
+	};
+	_proto._Label5_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 122;
+		t.text = "XXX于某年某月某日提交";
+		t.width = 426;
+		t.x = 134;
+		t.y = 854;
+		return t;
+	};
+	return lobbyComponentSkin;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/loginComponent.exml'] = window.loginComponentSkin = (function (_super) {
+	__extends(loginComponentSkin, _super);
+	function loginComponentSkin() {
+		_super.call(this);
+		this.skinParts = ["loginLabel","userId","vCode","yesBtn"];
+		
+		this.height = 1136;
+		this.width = 640;
+		this.elementsContent = [this._Rect1_i(),this.loginLabel_i(),this._Rect2_i(),this._Rect3_i(),this.userId_i(),this.vCode_i(),this.yesBtn_i()];
+	}
+	var _proto = loginComponentSkin.prototype;
+
+	_proto._Rect1_i = function () {
+		var t = new eui.Rect();
+		t.bottom = 0;
+		t.fillColor = 0x3476bc;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		return t;
+	};
+	_proto.loginLabel_i = function () {
+		var t = new eui.Label();
+		this.loginLabel = t;
+		t.fontFamily = "DFKai-SB";
+		t.horizontalCenter = 0;
+		t.size = 40;
+		t.text = "手机号登录";
+		t.textColor = 0x000000;
+		t.y = 138;
+		return t;
+	};
+	_proto._Rect2_i = function () {
+		var t = new eui.Rect();
+		t.ellipseHeight = 40;
+		t.ellipseWidth = 40;
+		t.fillColor = 0xe5f9f9;
+		t.height = 80;
+		t.horizontalCenter = 0;
+		t.strokeColor = 0x05b7fc;
+		t.strokeWeight = 2;
+		t.width = 520;
+		t.y = 240;
+		return t;
+	};
+	_proto._Rect3_i = function () {
+		var t = new eui.Rect();
+		t.ellipseHeight = 40;
+		t.ellipseWidth = 40;
+		t.fillColor = 0xE5F9F9;
+		t.height = 80;
+		t.horizontalCenter = 0;
+		t.strokeColor = 0x05B7FC;
+		t.strokeWeight = 2;
+		t.width = 520;
+		t.y = 340;
+		return t;
+	};
+	_proto.userId_i = function () {
+		var t = new eui.EditableText();
+		this.userId = t;
+		t.height = 80;
+		t.horizontalCenter = "0";
+		t.prompt = "请输入手机号";
+		t.size = 50;
+		t.text = "";
+		t.textAlign = "center";
+		t.textColor = 0x02f7e7;
+		t.verticalAlign = "middle";
+		t.width = 520;
+		t.y = 240;
+		return t;
+	};
+	_proto.vCode_i = function () {
+		var t = new eui.EditableText();
+		this.vCode = t;
+		t.height = 80;
+		t.horizontalCenter = "0";
+		t.prompt = "请输入验证码";
+		t.size = 50;
+		t.text = "";
+		t.textAlign = "center";
+		t.textColor = 0x02F7E7;
+		t.verticalAlign = "middle";
+		t.width = 520;
+		t.y = 340;
+		return t;
+	};
+	_proto.yesBtn_i = function () {
+		var t = new eui.Button();
+		this.yesBtn = t;
+		t.height = 67;
+		t.horizontalCenter = 0;
+		t.label = "登录";
+		t.verticalCenter = 0;
+		t.width = 171;
+		return t;
+	};
+	return loginComponentSkin;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/PanelSkin.exml'] = window.skins.PanelSkin = (function (_super) {
 	__extends(PanelSkin, _super);
 	function PanelSkin() {
